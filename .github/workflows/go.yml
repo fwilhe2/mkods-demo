@@ -1,0 +1,27 @@
+name: Run demo workflow
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.20'
+
+    - name: Install mkods
+      run: go install https://github.com/fwilhe2/mkods
+
+    - name: Test
+      run: make
+
+    - run: ls -la
