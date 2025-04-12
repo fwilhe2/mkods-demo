@@ -19,7 +19,7 @@ jobs:
         go-version: '1.20'
 
     - name: Install mkods
-      run: go install https://github.com/fwilhe2/mkods
+      run: go install github.com/fwilhe2/mkods
 
     - name: Test
       run: make
