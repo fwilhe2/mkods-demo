@@ -9,6 +9,10 @@ fs.writeFileSync("konto-spreadsheet.json", (JSON.stringify(foo.konto.transaktion
             "type": "string"
         },
         {
+            "value": t.details.beschreibung.toString(),
+            "type": "string"
+        },
+        {
             "value": t.details.betrag.wert.toString(),
             "type": "currency"
         },
