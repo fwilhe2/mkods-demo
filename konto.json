@@ -1,0 +1,150 @@
+{
+  "konto": {
+    "inhaber": {
+      "vorname": "Max",
+      "nachname": "Mustermann",
+      "geburtsdatum": "1985-06-15",
+      "adresse": {
+        "strasse": "Musterstraße 12",
+        "plz": "12345",
+        "ort": "Musterstadt",
+        "land": "Deutschland"
+      }
+    },
+    "kontodaten": {
+      "iban": "DE89370400440532013000",
+      "bic": "COBADEFFXXX",
+      "kontotyp": "Girokonto",
+      "eröffnungsdatum": "2010-09-01"
+    },
+    "transaktionen": [
+      {
+        "transaktionsID": "TX1001",
+        "zeitstempel": "2025-04-10T09:15:00",
+        "details": {
+          "art": "Gutschrift",
+          "betrag": {
+            "wert": 2500.00,
+            "waehrung": "EUR"
+          },
+          "beschreibung": "Monatlicher Gehaltseingang",
+          "quelle": {
+            "arbeitgeber": {
+              "name": "Beispiel AG",
+              "adresse": {
+                "strasse": "Geschäftsstraße 5",
+                "plz": "54321",
+                "ort": "Beispielstadt"
+              }
+            }
+          },
+          "zusatzinformationen": {
+            "referenznummer": "INV-20250410-001",
+            "verwendungszweck": "Gehalt April 2025"
+          }
+        }
+      },
+      {
+        "transaktionsID": "TX1002",
+        "zeitstempel": "2025-04-11T14:30:00",
+        "details": {
+          "art": "Lastschrift",
+          "betrag": {
+            "wert": -80.50,
+            "waehrung": "EUR"
+          },
+          "beschreibung": "Einkauf Supermarkt",
+          "empfaenger": {
+            "name": "Markt GmbH",
+            "filiale": {
+              "nummer": "B12",
+              "standort": {
+                "strasse": "Einkaufsweg 3",
+                "ort": "Musterstadt"
+              }
+            }
+          },
+          "zusatzinformationen": {
+            "referenznummer": "POS-20250411-078",
+            "zahlungsmethode": "EC-Karte"
+          }
+        }
+      },
+      {
+        "transaktionsID": "TX1003",
+        "zeitstempel": "2025-04-11T18:45:00",
+        "details": {
+          "art": "Überweisung",
+          "betrag": {
+            "wert": -150.75,
+            "waehrung": "EUR"
+          },
+          "beschreibung": "Rechnungszahlung Stromanbieter",
+          "zielkonto": {
+            "kontoinhaber": "Strom & Gas GmbH",
+            "kontodetails": {
+              "iban": "DE75512108001245126199",
+              "bic": "GENODEF1P10"
+            }
+          },
+          "zusatzinformationen": {
+            "referenznummer": "RECH-20250411-STR",
+            "verwendungszweck": "Stromrechnung März 2025"
+          }
+        }
+      },
+      {
+        "transaktionsID": "TX1004",
+        "zeitstempel": "2025-04-12T08:20:00",
+        "details": {
+          "art": "Gutschrift",
+          "betrag": {
+            "wert": 45.00,
+            "waehrung": "EUR"
+          },
+          "beschreibung": "Erstattung Retouren",
+          "quelle": {
+            "händler": {
+              "name": "Mode & mehr",
+              "filiale": {
+                "id": "M3",
+                "kontakt": {
+                  "telefon": "+49 30 123456",
+                  "email": "service@modeundmehr.de"
+                }
+              }
+            }
+          },
+          "zusatzinformationen": {
+            "referenznummer": "RET-20250412-008",
+            "belegnummer": "B-34567"
+          }
+        }
+      },
+      {
+        "transaktionsID": "TX1005",
+        "zeitstempel": "2025-04-12T16:05:00",
+        "details": {
+          "art": "Lastschrift",
+          "betrag": {
+            "wert": -60.00,
+            "waehrung": "EUR"
+          },
+          "beschreibung": "Restaurantbesuch",
+          "empfaenger": {
+            "name": "Zum guten Geschmack",
+            "adresse": {
+              "strasse": "Gourmetstraße 8",
+              "plz": "12345",
+              "ort": "Musterstadt"
+            }
+          },
+          "zusatzinformationen": {
+            "referenznummer": "REST-20250412-045",
+            "zahlungsmethode": "Kreditkarte"
+          }
+        }
+      }
+    ]
+  }
+}
