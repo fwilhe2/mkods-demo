@@ -1,8 +1,20 @@
 const fs = require('fs');
 
-const foo = JSON.parse(fs.readFileSync('konto.json').toString())
+function stringCell(value) {
+    return {
+        "value": value.toString(),
+        "type": "string"
+    }
+}
 
-fs.writeFileSync("konto-spreadsheet.json", (JSON.stringify(foo.konto.transaktionen.map(t => {
+const kontoJson = JSON.parse(fs.readFileSync('konto.json').toString())
+
+let transaktionen = [[
+    stringCell("ID"),
+    stringCell("Beschreibung"),
+    stringCell("Betrag"),
+    stringCell("Währung"),
+]].concat(kontoJson.konto.transaktionen.map(t => {
     return [
         {
             "value": t.transaktionsID.toString(),
@@ -22,4 +34,9 @@ fs.writeFileSync("konto-spreadsheet.json", (JSON.stringify(foo.konto.transaktion
         }
     ]
 
-}))))
+}))
+
+
+const spreadsheetJson = JSON.stringify(transaktionen)
+
+fs.writeFileSync("konto-spreadsheet.json", spreadsheetJson)
